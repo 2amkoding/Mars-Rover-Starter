@@ -25,8 +25,8 @@ it("response returned by receiveMessage contains the name of the message", funct
 });
 
 it("response returned by receiveMessage includes two results if two commands are sent in the message", function() {
-  expect(response.results[0].completed).toBeTruthy();
-  
+  expect(response.results[0]).toBeDefined();
+  expect(response.results[1]).toBeDefined();
 });
 
 });
